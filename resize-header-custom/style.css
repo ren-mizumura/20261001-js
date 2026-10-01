@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 全称セレクタ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* text-align: center; */
+    margin: 0;
+}
+
+header {
+    background: #fdca4b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* 追加: opacity と visibility にアニメーションをかける */
+    transition: opacity .3s, visibility .3s; 
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 追加: フェードアウトさせるためのクラス */
+header.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+header h1 {
+    color: #ab4f50;
+    padding: 90px 25px;
+    margin: 0;
+    font-size: 3em;
+    transition: padding .3s, font-size .3s;
+}
+
+header nav {
+    position: absolute;
+    top: 120px;
+    right: 25px;
+    transition: top .3s;
+}
+
+header.small h1 {
+    padding: 25px;
+    font-size: 1.5em;
+}
+
+header.small nav {
+    top: 30px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: #ad4f50;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+main {
+    padding: 300px 25px 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ad4f50;
+}
+
+section p {
+    color: #462c2c;
+    margin-bottom: 50px;
+    line-height: 2em;
+}
